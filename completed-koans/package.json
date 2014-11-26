@@ -1,0 +1,32 @@
+{
+  "name": "coffeescript-koans",
+  "version": "1.1.0",
+  "description": "Koans for learning CoffeeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register -R spec completed-koans/*.coffee",
+    "watch": "mocha -w --compilers coffee:coffee-script/register -R spec completed-koans/*.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sleepyfox/coffeescript-koans.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Koans",
+    "Tests",
+    "TDD",
+    "CoffeeScript"
+  ],
+  "author": "@sleepyfox",
+  "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+  "bugs": {
+    "url": "https://github.com/sleepyfox/coffeescript-koans/issues"
+  },
+  "homepage": "https://github.com/sleepyfox/coffeescript-koans",
+  "devDependencies": {
+    "coffee-script": "~1.7.1",
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
+  }
+}
