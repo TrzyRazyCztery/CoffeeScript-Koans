@@ -20,27 +20,27 @@ describe 'About inheritance', ->
   swedishChef = new SwedishChef 3, 'cooking', 'chillin'
 
   it 'should be able to call a method on the derived object', ->
-    swedishChef.cook().should.equal FILL_ME_IN
+    swedishChef.cook().should.equal 'Mmmm soup!'
 
-  xit 'should be able to call a method on the base object', ->
-    swedishChef.answerNanny().should.equal FILL_ME_IN
+  it 'should be able to call a method on the base object', ->
+    swedishChef.answerNanny().should.equal "Everything's cool!"
 
-  xit 'should set constructor parameters on the base object', ->
-    swedishChef.age.should.equal FILL_ME_IN
-    swedishChef.hobby.should.equal FILL_ME_IN
+  it 'should set constructor parameters on the base object', ->
+    swedishChef.age.should.equal 3
+    swedishChef.hobby.should.equal 'cooking'
 
-  xit 'should set constructor parameters on the derived object', ->
-    swedishChef.mood.should.equal FILL_ME_IN
+  it 'should set constructor parameters on the derived object', ->
+    swedishChef.mood.should.equal "chillin"
 
-  xit 'should allow instances to override class methods', ->
+  it 'should allow instances to override class methods', ->
     gonzo = new Muppet 3, 'daredevil performer'
     gonzo.answerNanny = -> 'Hehehe!'
-    gonzo.answerNanny().should.equal FILL_ME_IN
-    muppet.answerNanny().should.equal FILL_ME_IN
+    gonzo.answerNanny().should.equal 'Hehehe!'
+    muppet.answerNanny().should.equal "Everything's cool!"
 
-  xit 'should allow derived classes to override base classes', ->
+  it 'should allow derived classes to override base classes', ->
     class DanishChef extends SwedishChef
       cook: -> 'Sizzle'
     redzepi = new DanishChef 30, 'foraging', 'happy'
-    redzepi.cook().should.equal FILL_ME_IN
-    swedishChef.cook().should.equal FILL_ME_IN
+    redzepi.cook().should.equal 'Sizzle'
+    swedishChef.cook().should.equal 'Mmmm soup!'
